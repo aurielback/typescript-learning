@@ -16,6 +16,12 @@ function addMoreNumbers(num1 : number, num2 : number, ...num3 : number[]) : numb
     return num1 + num2 + num3.reduce((a,b) => a + b);
 }
 
-const numbers : number[] = [1,2,3,4,5];
+//generic function
 
-console.log(addMoreNumbers(2,3,...numbers));
+function getItems<T>(items : T[]) : T[]{
+    return new Array<T>().concat(items);
+}
+
+let concatResult = getItems<number>([1,2,3,4,5]);
+let concatString = getItems<string>(['a', 'b', 'c', 'd']);
+
