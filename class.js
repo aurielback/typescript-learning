@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 ;
 //class1
 class Employee {
@@ -7,6 +8,14 @@ class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
+    }
+    login() {
+        return {
+            name: 'Jakub',
+            age: 26,
+            id: 1,
+            email: '',
+        };
     }
     static getEmployeeCount() {
         return 50;
